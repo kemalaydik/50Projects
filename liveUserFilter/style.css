@@ -1,0 +1,90 @@
+:root {
+	--primary-color: #87cdf6;
+	--secondary-color: hsl(120, 64%, 43%);
+	/* --border-color: #87cdf6; */
+	--text-color: #cffff6;
+	--border-radius: 8px;
+	--box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fafafa;
+}
+
+.users-container {
+	margin-top: 30px;
+	color: white;
+	width: 300px;
+	border: 1px solid #ccc;
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.header {
+	background-color: rgb(84, 67, 236);
+	padding: 20px 20px 5px;
+}
+
+.header > small {
+	display: block;
+	margin-top: 5px;
+}
+
+.header > input {
+	margin: 20px 0;
+	background-color: darkblue;
+	width: 100%;
+	padding: 10px;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	color: white;
+}
+
+.header > input::placeholder {
+	color: #ccc;
+}
+
+ul {
+	max-height: 450px;
+	overflow-y: auto;
+}
+
+.loading {
+	color: black;
+	padding: 30px;
+	font-size: 24px;
+	font-weight: 800;
+}
+
+.user {
+	display: flex;
+	color: black;
+	border-bottom: 1px solid #ccc;
+	padding: 20px;
+	gap: 15px;
+}
+
+.user > img {
+	width: 60px;
+	border-radius: 50%;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}

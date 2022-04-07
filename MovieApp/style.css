@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;800&display=swap');
+@import 'normalize.css';
+@import 'section.css';
+
+:root {
+	--secondary-color: #373b69;
+	--primary-color: #22254b;
+	--border-radius: 2px;
+	--box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12),
+		0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+body {
+	background-color: var(--primary-color);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 200;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+header {
+	display: flex;
+	background-color: var(--secondary-color);
+	justify-content: flex-end;
+	padding: 1rem;
+}
+
+form > input {
+	background-color: transparent;
+	border: 2px solid var(--primary-color);
+	outline: none;
+	color: #fff;
+	border-radius: 50px;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+}
+
+form > input::placeholder {
+	color: #7378c5;
+}
+
+form > input:focus {
+	background-color: var(--primary-color);
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 30px;
+	gap: 3rem;
+	justify-content: center;
+}
+
+.movie {
+	width: 300px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	border-radius: 10px;
+	background-color: var(--secondary-color);
+	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.movie > img {
+	width: 100%;
+}
+
+.movie:hover .overview {
+	transform: translateY(5%);
+	transition: transform 0.5s ease-in;
+}
+
+.movie-info {
+	color: #eee;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	letter-spacing: 0.5px;
+	font-weight: 200;
+}
+
+span {
+	background-color: var(--primary-color);
+	padding: 3px;
+	font-weight: 800;
+	align-self: center;
+}
+span.green {
+	color: lightgreen;
+}
+span.red {
+	color: red;
+}
+span.orange {
+	color: orange;
+}
+
+.movie-info h3 {
+	margin: 0;
+	font-weight: inherit;
+}
+
+.overview {
+	position: absolute;
+	bottom: 0;
+	background-color: white;
+	transform: translateY(101%);
+	max-height: 100%;
+	padding: 20px;
+}

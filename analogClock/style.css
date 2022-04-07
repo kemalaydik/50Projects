@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400&display=swap');
+@import 'normalize.css';
+@import 'section.css';
+
+:root {
+	--primary-color: #000;
+	--secondary-color: #fff;
+	--border-radius: 2px;
+	--box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12),
+		0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+html {
+	transition: all 0.5s ease-in;
+}
+
+html.dark {
+	--primary-color: #fff;
+	--secondary-color: #333;
+	background-color: #111;
+	color: var(--primary-color);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Heebo', sans-serif;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.toggle {
+	cursor: pointer;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border-radius: 4px;
+	padding: 8px 12px;
+	top: 100px;
+}
+
+.toggle:focus {
+	outline: none;
+}
+
+.clock-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.clock {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.needle {
+	width: 3px;
+	height: 65px;
+	background-color: var(--primary-color);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+.needle.hour {
+	transform-origin: bottom center;
+	transform: translate(-50%, -100%) rotate(0deg);
+}
+.needle.minute {
+	transform-origin: bottom center;
+	height: 100px;
+	transform: translate(-50%, -100%) rotate(0deg);
+}
+.needle.second {
+	transform-origin: bottom center;
+	height: 100px;
+	transform: translate(-50%, -100%) rotate(0deg);
+	background-color: #e74c3c;
+}
+
+.center,
+.center::after {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: #e74c3c;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.center::after {
+	content: '';
+	width: 5px;
+	height: 5px;
+	background-color: var(--primary-color);
+}
+
+.time {
+	font-size: 60px;
+}
+
+.date {
+	color: #aaa;
+	letter-spacing: 0.3px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.date > .circle {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border-radius: 50%;
+	height: 18px;
+	width: 18px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 18px;
+	transition: all 0.5s ease-in;
+	font-size: 12px;
+}

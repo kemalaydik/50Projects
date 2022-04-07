@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+:root {
+	--primary-color: #08208e;
+	--secondary-color: #2b42a6;
+	--border-color: #04063c;
+	--text-color: #b6e5fc;
+	--border-radius: 2px;
+	--box-shadow: rgb(38, 57, 77) 0px 20px 5 -10px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--primary-color);
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	background-color: var(--secondary-color);
+	color: var(--text-color);
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	border: 10px solid var(--border-color);
+}
+
+.container > h1 {
+	text-align: center;
+}
+
+.generator {
+	position: relative;
+}
+
+input[type='text'] {
+	width: 100%;
+	height: 170%;
+	background-color: var(--primary-color);
+	outline: none;
+	border: none;
+	padding-left: 10px;
+	color: white;
+}
+input[type='number'] {
+	width: 50px;
+}
+
+i {
+	background-color: black;
+	background-color: var(--secondary-color);
+	padding: 5px;
+	position: absolute;
+	color: white;
+	right: 3px;
+	top: 3px;
+	cursor: pointer;
+}
+
+i:active {
+	scale: 0.96;
+}
+
+.block {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.block > p {
+	flex: 1 0 auto;
+}
+
+input:focus {
+	outline: none;
+}
+
+button {
+	background-color: var(--primary-color);
+	color: var(--text-color);
+	border: none;
+	padding: 15px;
+	font-size: 2 rem;
+	font-family: inherit;
+}
+
+.message {
+	background-color: orange;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	color: white;
+}

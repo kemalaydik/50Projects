@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import 'section.css';
+
+:root {
+	--primary-color: hsl(255, 90%, 50%);
+	--secondary-color: #3300cc;
+	--border-radius: 2px;
+	--box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--secondary-color);
+	gap: 2rem;
+}
+
+input {
+	background-color: var(--primary-color);
+	width: 35rem;
+	border: none;
+	color: white;
+	font-family: inherit;
+	padding: 1rem;
+	border-radius: 10px;
+	box-shadow: var(--box-shadow);
+}
+
+input:focus {
+	outline: none;
+}
+
+.user-card {
+	display: flex;
+	width: 600px;
+	background-color: var(--primary-color);
+	border-radius: 10px;
+	padding: 1rem;
+	box-shadow: var(--box-shadow);
+	color: white;
+	gap: 1.5rem;
+}
+
+.profile {
+	flex: 0 0 auto;
+	width: 6rem;
+	border-radius: 50%;
+	height: 6rem;
+	overflow: hidden;
+	border: 5px solid var(--secondary-color);
+	object-fit: cover;
+	object-position: center center;
+}
+.text > * {
+	margin-bottom: 0.6rem;
+}
+
+.text > h2 {
+	font-size: 1.3rem;
+}
+.text > p {
+	font-size: 0.8rem;
+}
+
+.metrics {
+	display: flex;
+	justify-content: flex-start;
+	gap: 3rem;
+}
+
+.repos {
+	font-size: 0.7rem;
+	width: auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.repos > span {
+	background-color: var(--secondary-color);
+	padding: 2px;
+	margin-right: 0.6rem;
+}

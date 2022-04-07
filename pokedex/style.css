@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+:root {
+	--primary-color: #87cdf6;
+	--secondary-color: hsl(120, 64%, 43%);
+	/* --border-color: #87cdf6; */
+	--text-color: #cffff6;
+	--border-radius: 8px;
+	--box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #efefbb;
+	background: linear-gradient(to right, #d4d3dd, #efefbb);
+	text-align: center;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.card {
+	background-color: #ccc;
+	width: 180px;
+	height: 280px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	/* gap: 30px; */
+	margin: 20px;
+	/* flex: 1 1 auto; */
+	border-radius: 8px;
+	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.card > img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	/* scale: 2; */
+	/* max-width: 90%; */
+	margin-bottom: 30px;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.card > small {
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	padding: 5px;
+}

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+	--primary-color: #516dff;
+	--secondary-color: hsl(120, 64%, 43%);
+	--text-color: #cffff6;
+	--border-radius: 8px;
+	--box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Press Start 2P', cursive;
+	background-color: var(--primary-color);
+	color: white;
+	overflow: hidden;
+}
+
+.screen {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	border: 10px solid black;
+	gap: 10px;
+}
+
+.screen > button {
+	border: none;
+	padding: 10px 20px;
+	background-color: white;
+	cursor: pointer;
+	color: var(--primary-color);
+	font-family: inherit;
+}
+
+.screen > button:active {
+	scale: 0.98;
+}
+
+.insects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+}
+
+ul > li {
+	list-style: none;
+}
+
+.choose-insect-btn {
+	border: 2px solid white;
+	cursor: pointer;
+	font-family: inherit;
+	color: white;
+}
+.choose-insect-btn:hover,
+.choose-insect-btn:active {
+	background-color: white;
+	color: #516dff;
+}
+
+.choose-insect-btn > img {
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+	object-position: center center;
+}
+
+.choose-insect-btn > p {
+	padding: 5px;
+}
+
+button {
+	background-color: transparent;
+}
+
+.game-container {
+	position: relative;
+}
+
+#time {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 1rem;
+}
+
+#score {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 1rem;
+}
+
+#message {
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.541);
+	line-height: 1.7;
+	padding: 20px;
+	z-index: 100;
+	transform: translateX(-150%);
+}
+
+.screen.up {
+	margin-top: -100vh;
+	transition: all 0.5s linear;
+}
+
+#message.visible {
+	transform: translateX(0%);
+	transition: transform 0.5s ease-in;
+}
+
+.insects-container > img {
+	position: absolute;
+	width: 80px;
+	cursor: pointer;
+}

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+@import 'normalize.css';
+@import 'section.css';
+
+:root {
+	--bg-color: #6599ff;
+	--primary-color: hsl(241, 29%, 30%);
+	--border-radius: 2px;
+	--box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* Fonts */
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli', sans-serif;
+	height: 100vh;
+	background-color: var(--bg-color);
+	color: white;
+}
+
+section {
+	max-width: 600px;
+	text-align: center;
+}
+
+textarea {
+	max-width: inherit;
+	background: #ffde00;
+}
+
+button {
+	border-radius: 20px;
+	outline: none;
+	border: none;
+	margin: 20px 10px;
+	padding: 10px;
+	background-color: orange;
+	color: white;
+	box-shadow: var(--box-shadow);
+}
+
+button.selected {
+	background-color: #097054;
+	color: black;
+}

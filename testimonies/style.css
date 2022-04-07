@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+:root {
+	--primary-color: #87cdf6;
+	--secondary-color: hsl(120, 64%, 43%);
+	/* --border-color: #87cdf6; */
+	--text-color: #cffff6;
+	--border-radius: 8px;
+	--box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: lightblue;
+	text-align: center;
+	gap: 10px;
+}
+
+.testimony-container {
+	position: relative;
+	width: 600px;
+	display: flex;
+	background-color: #306eff;
+	padding: 30px 10px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+	color: white;
+}
+
+.progress-bar {
+	width: 0%;
+	transform-origin: top left;
+	height: 5px;
+	background-color: white;
+	position: absolute;
+	left: 10%;
+	top: 15px;
+	border-radius: 5px;
+	animation: grow 4s linear infinite;
+}
+
+@keyframes grow {
+	100% {
+		width: 80%;
+	}
+}
+
+.fa-solid {
+	font-size: 2rem;
+	padding: 20px;
+	color: orange;
+}
+
+.person-info {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.person-info > img {
+	width: 60px;
+	border-radius: 50%;
+	display: flex;
+}
+
+.testimony > * {
+	margin-bottom: 20px;
+}
+
+.testimony {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.testimony > p {
+	text-align: left;
+}

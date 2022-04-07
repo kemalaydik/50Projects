@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="message"></div>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="generator">
+            <input type="text" id="textbox">
+            <i class="fas fa-clipboard"></i>
+        </div>
+        <div class="block">
+            <p>Password Letters</p>
+            <input type="number" id="numberLetters">
+        </div>
+        <div class="block">
+            <p>Include uppercase letters</p>
+            <input type="checkbox" id="uppercaseCb">
+        </div>
+        <div class="block">
+            <p>Include lowercase letters</p>
+            <input type="checkbox" id="lowercaseCb">
+        </div>
+        <div class="block">
+            <p>Include numbers</p>
+            <input type="checkbox" id="numbersCb">
+        </div>
+        <div class="block">
+            <p>Include symbols</p>
+            <input type="checkbox" id="symbolsCb">
+        </div>
+        <button>Generate Password</button>
+    </div>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+<script src="index.js"></script>
+
+</html>
